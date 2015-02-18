@@ -10,10 +10,10 @@
   "uuid": "132f6dba-2e9a-4b80-bdac-0274645b81a2",
   "patterns": [
     { "match": "\\$[A-Za-z0-9_\\-]+",
-      "name": "variable.pfconf",
+      "name": "variable.parameter.pfconf",
       "comment": "variables"
     },
-    { "match": "^\\#.*$",
+    { "match": "^\\s*#.*$",
       "name": "comment.line.pfconf",
       "comment": "comments"
     },
@@ -48,31 +48,31 @@
       },
       "comment": "variables defs"
     },
-    { "match": "(quick|persist)",
+    { "match": "(quick\\b|persist\\b)",
       "name": "markup.heading.pfconf",
       "comment": "keywords qualifier"
     },
-    { "match": "(tagged|tag)",
+    { "match": "(tagged\\b|tag\\b)",
       "name": "markup.quote.pfconf",
       "comment": "keywords tag"
     },
-    { "match": "(all|any|yes|no|drop|return)",
-      "name": "invalid.illegal.pfconf",
+    { "match": "(all\\b|any\\b|yes\\b|no\\b|drop\\b|return\\b)",
+      "name": "markup.italic.pfconf",
       "comment": "keywords atom"
     },
-    { "match": "(proto|inet6|inet|tcp|udp|icmp6|icmp|port|other|carp|pfsync|first|opening|closing|single|finwait|established|closed|multiple|error|states|frags|interval|frag)",
+    { "match": "(proto\\b|inet6\\b|inet\\b|tcp\\b|udp\\b|icmp6\\b|icmp\\b|port\\b|other\\b|carp\\b|pfsync\\b|first\\b|opening\\b|closing\\b|single\\b|finwait\\b|established\\b|closed\\b|multiple\\b|error\\b|states\\b|frags\\b|interval\\b|frag\\b)",
       "name": "markup.list.pfconf",
       "comment": "keywords builtin"
     },
-    { "match": "(label|user|file|timeout|limit|optimization|block-policy|loginterface|require-order|skip|synproxy|state|parent|bandwidth|static-port)",
+    { "match": "(label\\b|user\\b|file\\b|timeout\\b|limit\\b|optimization\\b|block-policy\\b|loginterface\\b|require-order\\b|skip\\b|synproxy\\b|state\\b|parent\\b|bandwidth\\b|static-port\\b)",
       "name": "entity.name.pfconf",
       "comment": "keywords def"
     },
-    { "match": "(altq|anchor|antispoof|binat|pass|block|queue|match|scrub|table|set|in|out|rdr-to|divert-to|route-to|reply-to|nat-to|nat|rdr)",
+    { "match": "(altq\\b|anchor\\b|antispoof\\b|binat\\b|pass\\b|block\\b|queue\\b|match\\b|scrub\\b|table\\b|set\\b|in\\b|out\\b|from\\b|to\\b|on\\b|rdr-to\\b|divert-to\\b|route-to\\b|reply-to\\b|nat-to\\b|nat\\b|rdr\\b|include\\b)",
       "name": "keyword.control.pfconf",
       "comment": "keywords main"
     },
-    { "match": "(log)",
+    { "match": "(log\\b)",
       "name": "storage.pfconf",
       "comment": "keywords attribute"
     }

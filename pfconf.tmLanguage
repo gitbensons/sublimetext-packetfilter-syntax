@@ -16,13 +16,13 @@
 			<key>match</key>
 			<string>\$[A-Za-z0-9_\-]+</string>
 			<key>name</key>
-			<string>variable.pfconf</string>
+			<string>variable.parameter.pfconf</string>
 		</dict>
 		<dict>
 			<key>comment</key>
 			<string>comments</string>
 			<key>match</key>
-			<string>^\#.*$</string>
+			<string>^\s*#.*$</string>
 			<key>name</key>
 			<string>comment.line.pfconf</string>
 		</dict>
@@ -94,7 +94,7 @@
 			<key>comment</key>
 			<string>keywords qualifier</string>
 			<key>match</key>
-			<string>(quick|persist)</string>
+			<string>(quick\b|persist\b)</string>
 			<key>name</key>
 			<string>markup.heading.pfconf</string>
 		</dict>
@@ -102,7 +102,7 @@
 			<key>comment</key>
 			<string>keywords tag</string>
 			<key>match</key>
-			<string>(tagged|tag)</string>
+			<string>(tagged\b|tag\b)</string>
 			<key>name</key>
 			<string>markup.quote.pfconf</string>
 		</dict>
@@ -110,15 +110,15 @@
 			<key>comment</key>
 			<string>keywords atom</string>
 			<key>match</key>
-			<string>(all|any|yes|no|drop|return)</string>
+			<string>(all\b|any\b|yes\b|no\b|drop\b|return\b)</string>
 			<key>name</key>
-			<string>invalid.illegal.pfconf</string>
+			<string>markup.italic.pfconf</string>
 		</dict>
 		<dict>
 			<key>comment</key>
 			<string>keywords builtin</string>
 			<key>match</key>
-			<string>(proto|inet6|inet|tcp|udp|icmp6|icmp|port|other|carp|pfsync|first|opening|closing|single|finwait|established|closed|multiple|error|states|frags|interval|frag)</string>
+			<string>(proto\b|inet6\b|inet\b|tcp\b|udp\b|icmp6\b|icmp\b|port\b|other\b|carp\b|pfsync\b|first\b|opening\b|closing\b|single\b|finwait\b|established\b|closed\b|multiple\b|error\b|states\b|frags\b|interval\b|frag\b)</string>
 			<key>name</key>
 			<string>markup.list.pfconf</string>
 		</dict>
@@ -126,7 +126,7 @@
 			<key>comment</key>
 			<string>keywords def</string>
 			<key>match</key>
-			<string>(label|user|file|timeout|limit|optimization|block-policy|loginterface|require-order|skip|synproxy|state|parent|bandwidth|static-port)</string>
+			<string>(label\b|user\b|file\b|timeout\b|limit\b|optimization\b|block-policy\b|loginterface\b|require-order\b|skip\b|synproxy\b|state\b|parent\b|bandwidth\b|static-port\b)</string>
 			<key>name</key>
 			<string>entity.name.pfconf</string>
 		</dict>
@@ -134,7 +134,7 @@
 			<key>comment</key>
 			<string>keywords main</string>
 			<key>match</key>
-			<string>(altq|anchor|antispoof|binat|pass|block|queue|match|scrub|table|set|in|out|rdr-to|divert-to|route-to|reply-to|nat-to|nat|rdr)</string>
+			<string>(altq\b|anchor\b|antispoof\b|binat\b|pass\b|block\b|queue\b|match\b|scrub\b|table\b|set\b|in\b|out\b|from\b|to\b|on\b|rdr-to\b|divert-to\b|route-to\b|reply-to\b|nat-to\b|nat\b|rdr\b|include\b)</string>
 			<key>name</key>
 			<string>keyword.control.pfconf</string>
 		</dict>
@@ -142,7 +142,7 @@
 			<key>comment</key>
 			<string>keywords attribute</string>
 			<key>match</key>
-			<string>(log)</string>
+			<string>(log\b)</string>
 			<key>name</key>
 			<string>storage.pfconf</string>
 		</dict>
