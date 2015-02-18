@@ -19,6 +19,20 @@
 			<string>variable.parameter.pfconf</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.pfconf</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>variables</string>
+			<key>match</key>
+			<string>^([A-Za-z0-9_\-]+)\s*=</string>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>comments</string>
 			<key>match</key>
