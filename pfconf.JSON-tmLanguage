@@ -35,17 +35,20 @@
       "name": "storage.modifier.pfconf",
       "comment": "lists"
     },
-
+    { "match": "([\\\"]).+([\\\"])",
+      "captures": {
+        "1": { "name": "string.pfconf" },
+        "2": { "name": "string.pfconf" }
+      },
+      "comment": "strings"
+    },
+    { "match": "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)",
+      "name": "markup.italic.pfconf",
+      "comment": "numeric ipv4 address"
+    },
     { "match": "\\/[0-9]+",
       "name": "markup.italic.pfconf",
       "comment": "numeric netmasks"
-    },
-    { "match": "[\\\"](.+)[\\\"]",
-      "name": "string.pfconf",
-      "captures": {
-        "1": { "name": "string.pfconf" }
-      },
-      "comment": "strings"
     },
     { "match": "^(\\S+)\\s*=",
       "name": "",

@@ -65,17 +65,14 @@
 			<string>storage.modifier.pfconf</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>numeric netmasks</string>
-			<key>match</key>
-			<string>\/[0-9]+</string>
-			<key>name</key>
-			<string>markup.italic.pfconf</string>
-		</dict>
-		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.pfconf</string>
+				</dict>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>string.pfconf</string>
@@ -84,9 +81,23 @@
 			<key>comment</key>
 			<string>strings</string>
 			<key>match</key>
-			<string>[\"](.+)[\"]</string>
+			<string>([\"]).+([\"])</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>numeric ipv4 address</string>
+			<key>match</key>
+			<string>((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)</string>
 			<key>name</key>
-			<string>string.pfconf</string>
+			<string>markup.italic.pfconf</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>numeric netmasks</string>
+			<key>match</key>
+			<string>\/[0-9]+</string>
+			<key>name</key>
+			<string>markup.italic.pfconf</string>
 		</dict>
 		<dict>
 			<key>captures</key>
